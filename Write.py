@@ -53,27 +53,27 @@ while continue_reading:
         if status == MIFAREReader.MI_OK:
 
             # Variable for the data to write
-            data = []
+            data = [144, 145, 151, 156, 145, 155, 165, 144, 144, 141, 144, 165, 141, 146, 146, 145]
 
             # Fill the data with 0xFF
-            for x in range(0,16):
-                data.append(0xFF)
+           # for x in range(0,16):
+               # data.append(0xFF)
 
             print "Sector 8 looked like this:"
             # Read block 8
             MIFAREReader.MFRC522_Read(8)
             print "\n"
 
-            print "Sector 8 will now be filled with 0xFF:"
+           # print "Sector 8 will now be filled with 0xFF:"
             # Write the data
             MIFAREReader.MFRC522_Write(8, data)
-            print "\n"
+           # print "\n"
 
             print "It now looks like this:"
             # Check to see if it was written
             MIFAREReader.MFRC522_Read(8)
             print "\n"
-
+"""
             data = []
             # Fill the data with 0x00
             for x in range(0,16):
@@ -87,11 +87,12 @@ while continue_reading:
             # Check to see if it was written
             MIFAREReader.MFRC522_Read(8)
             print "\n"
-
-            # Stop
+"""
+"""            # Stop
             MIFAREReader.MFRC522_StopCrypto1()
 
             # Make sure to stop reading for cards
             continue_reading = False
         else:
             print "Authentication error"
+"""
