@@ -3,6 +3,7 @@
  
 import RPi.GPIO as GPIO
 import MFRC522
+import time
  
 def sample_func(sample_var):
     # Beispiel Funktion
