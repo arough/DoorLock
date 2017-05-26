@@ -41,13 +41,13 @@ try:
                 print data
                 if data[:9] == authcode:
                     sample_func(data)
-                    time.sleep( 3 )
+                    
                      # Open door/blink led
                     GPIO.setup(40, GPIO.OUT)
                     GPIO.output(40, GPIO.HIGH)
                     time.sleep(1)
                     GPIO.output(40, GPIO.LOW)
-                
+                    time.sleep( 3 )
                 #elif ...
  
 except KeyboardInterrupt:
