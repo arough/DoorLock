@@ -5,6 +5,7 @@ import RPi.GPIO as GPIO
 import MFRC522
 import time
 
+GPIO.cleanup
 GPIO.setmode(GPIO.BOARD)
  
 def sample_func(sample_var):
