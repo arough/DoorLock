@@ -4,6 +4,8 @@
 import RPi.GPIO as GPIO
 import MFRC522
 import time
+
+GPIO.setmode(GPIO.BOARD)
  
 def sample_func(sample_var):
     # Beispiel Funktion
@@ -39,6 +41,12 @@ try:
                 if data[:9] == authcode:
                     sample_func(data)
                     time.sleep( 3 )
+                     # Open door/blink led
+                    GPIO.setup(40, GPIO.OUT)
+                    GPIO.output(40, GPIO.HIGH)
+                    time.sleep(1)
+                    GPIO.output(40, GPIO.LOW)
+                
                 #elif ...
  
 except KeyboardInterrupt:
