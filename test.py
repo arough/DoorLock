@@ -47,7 +47,7 @@ try:
                     #GPIO.output(40, GPIO.HIGH)
                     #time.sleep(1)
                     #GPIO.output(40, GPIO.LOW)
-                    #time.sleep( 3 )
+                    time.sleep( 3 )
                 #elif ...
  
 except KeyboardInterrupt:
