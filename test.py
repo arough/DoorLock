@@ -45,7 +45,7 @@ try:
                      # Open door/blink led
                     GPIO.setup(40, GPIO.OUT)
                     GPIO.output(40, GPIO.HIGH)
-                    time.sleep(0,1)
+                    time.sleep(0.1)
                     GPIO.output(40, GPIO.LOW)
                     time.sleep( 3 )
                 #elif ...
