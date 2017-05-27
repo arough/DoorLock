@@ -5,8 +5,8 @@ import RPi.GPIO as GPIO
 import MFRC522
 import time
 
-GPIO.cleanup
-GPIO.setmode(GPIO.BOARD)
+##GPIO.cleanup
+##GPIO.setmode(GPIO.BOARD)
  
 def sample_func(sample_var):
     # Beispiel Funktion
@@ -43,11 +43,11 @@ try:
                     sample_func(data)
                     
                      # Open door/blink led
-                    GPIO.setup(40, GPIO.OUT)
-                    GPIO.output(40, GPIO.HIGH)
-                    time.sleep(1)
-                    GPIO.output(40, GPIO.LOW)
-                    time.sleep( 3 )
+                    #GPIO.setup(40, GPIO.OUT)
+                    #GPIO.output(40, GPIO.HIGH)
+                    #time.sleep(1)
+                    #GPIO.output(40, GPIO.LOW)
+                    #time.sleep( 3 )
                 #elif ...
  
 except KeyboardInterrupt:
