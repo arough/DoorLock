@@ -278,7 +278,7 @@ class MFRC522:
     buf.append(self.PICC_SElECTTAG)
     buf.append(0x70)
     i = 0
-    while i<4:
+    while i<5:
       buf.append(serNum[i])
       i = i + 1
     pOut = self.CalulateCRC(buf)
