@@ -309,6 +309,7 @@ class MFRC522:
     i = 0
 
     # Next we append the first 4 bytes of the UID
+    print serNum
     while(i < 4):
       buff.append(serNum[i])
       i = i +1
