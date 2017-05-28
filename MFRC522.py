@@ -278,7 +278,7 @@ class MFRC522:
     buf.append(self.PICC_SElECTTAG)
     buf.append(0x70)
     i = 0
-    while i<5:
+    while i<len(serNum):
       buf.append(serNum[i])
       i = i + 1
     pOut = self.CalulateCRC(buf)
@@ -306,12 +306,16 @@ class MFRC522:
     while(i < len(Sectorkey)):
       buff.append(Sectorkey[i])
       i = i + 1
+    
+    if (isinstance(serNum, list) and len(serNum) < 4):
+      return self.MI_ERR
+    
     i = 0
 
     # Next we append the first 4 bytes of the UID
     while(i < 4):
       buff.append(serNum[i])
-      i = i +1
+      i = i + 1
 
     # Now we start the authentication itself
     (status, backData, backLen) = self.MFRC522_ToCard(self.PCD_AUTHENT,buff)
