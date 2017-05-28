@@ -38,7 +38,7 @@ try:
                 print data
                 if data[:9] == authcode:
                     sample_func(data)
-                    time.sleep( 3 )
+                    time.sleep( 0 )
                 #elif ...
  
 except KeyboardInterrupt:
